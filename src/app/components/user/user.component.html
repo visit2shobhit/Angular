@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><p class="text-start">Name</p></th>
+      <th scope="col"><p class="text-start">Email</p></th>
+      <th scope="col"><p class="text-start">Phone Number</p></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of userList">
+      <td><p class="text-start">{{ item.name }}</p></td>
+      <td><p class="text-start">{{ item.email }}</p></td>
+      <td><p class="text-start">{{ item.phone }}</p></td>
+    </tr>
+  </tbody>
+</table>

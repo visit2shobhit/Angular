@@ -1,0 +1,31 @@
+Data Binding
+  Property Binding
+    <input
+        type="text"
+        width="50px"
+        [value]="firstName"
+        class="form-control mb-2"
+      />
+
+  Event Binding
+    <input [type]="buttonType" class="btn-btn-success" value="Submit" (click)="showMeessage('Welcome Angular Learning')" />
+    
+Two way Data Binding
+      <input
+        type="text"
+        width="100px"
+        [(ngModel)]="firstName"
+        class="form-control"
+      />
+Directives - (ngIf, ngFor, ngClass, ngStyle)
+    Structural
+    Attribute 
+     
+      
+API Call
+    Using subscribe method
+    Using services      
+
+Routes - router-outlet    
+
+Control Flow Statements - @if and @else

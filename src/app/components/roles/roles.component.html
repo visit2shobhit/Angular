@@ -1,0 +1,46 @@
+<p class="text-center">Welcome {{ firstName }}</p>
+
+<!-- Property Binding Example -->
+<div class="container">
+  <div class="row">
+    <div class="col-7">
+      <input
+        type="text"
+        width="50px"
+        [value]="firstName"
+        class="form-control mb-2"
+      />
+
+      <input
+        type="text"
+        width="50px"
+        [value]="lastName"
+        class="form-control mb-2"
+      />
+      <input
+        type="text"
+        width="50px"
+        [value]="city"
+        class="form-control mb-2"
+      />
+      Married : Yes&nbsp;&nbsp;<input
+        [type]="inputType"
+      />&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;<input [type]="inputType" />
+      Event Binding Example:&nbsp;&nbsp;
+      <input [type]="buttonType" class="btn-btn-success" value="Submit" (click)="showMeessage('Welcome Angular Learning')" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+        <!-- Two Way Binding Example -->
+      Two Way Binding:   
+      <input
+        type="text"
+        width="100px"
+        [(ngModel)]="firstName"
+        class="form-control"
+      />
+    </div>
+  </div>
+</div>
+<!-- {{firstName}} //This is called Interpolation -->
