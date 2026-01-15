@@ -13,7 +13,7 @@
                             <th>Person Name</th>
                             <th>Contact Number</th>
                             <th>City</th>
-
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,6 +24,11 @@
                             <td>{{item.contactPersonName}}</td>
                             <td>{{item.contactNo}}</td>
                             <td>{{item.city}}</td>
+                            <td>
+                                <button class="btn btn-primary" (click)="onEdit(item)">Edit</button>
+                                <button class="btn btn-danger" (click)="onDelete(item.clientId)">Delete</button>
+
+                            </td>
                         </tr>
                         }
 
@@ -42,7 +47,18 @@
                 <div class="row">
                     <div class="col-6">
                         <label for="">Contact Name</label>
-                        <input type="text" [(ngModel)]="clientObject.contactPersonName" class="form-control">
+                        <input type="text" #presonName="ngModel" minlength="5" required [(ngModel)]="clientObject.contactPersonName"
+                            class="form-control">
+                        @if (presonName.touched) {
+                        <div class="text-danger">
+                            @if (presonName.errors?.['required']) {
+                                <span>Contact Name is required.</span> 
+                            }
+                            @if (presonName.errors?.['minlength']) {
+                                <span>Minimum length is 5 required</span> 
+                            }
+                        </div>
+                        }
                     </div>
                     <div class="col-6">
                         <label for="">Company Name</label>
