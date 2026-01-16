@@ -2,6 +2,43 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19. It consists basics CRUD Operation and Modern Angular Concepts
 
+#Topics Covered
+
+Data Binding
+  Property Binding
+    <input
+        type="text"
+        width="50px"
+        [value]="firstName"
+        class="form-control mb-2"
+      />
+
+  Event Binding
+    <input [type]="buttonType" class="btn-btn-success" value="Submit" (click)="showMeessage('Welcome Angular Learning')" />
+    
+Two way Data Binding
+      <input
+        type="text"
+        width="100px"
+        [(ngModel)]="firstName"
+        class="form-control"
+      />
+Directives - (ngIf, ngFor, ngClass, ngStyle)
+    Structural
+    Attribute 
+     
+      
+API Call
+    Using subscribe method
+    Using services      
+
+Routes - router-outlet    
+
+Control Flow Statements - @if and @else
+
+Template Form
+Reactive Form
+
 ## Development server
 
 To start a local development server, run:
