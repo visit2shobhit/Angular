@@ -1,6 +1,6 @@
 # SmapleAngularProect
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19. It consists basics CRUD Operation and Modern Angular Concepts
 
 ## Development server
 
