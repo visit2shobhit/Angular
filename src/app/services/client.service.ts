@@ -14,6 +14,9 @@ export class ClientService {
   getAllClients(){
     return this.http.get(environment.API_URL + "GetAllClients");
   }
+  getAllEmployees(){
+    return this.http.get(environment.API_URL + "GetAllEmployee");
+  }
   addUpdate(obj:Client){
     return this.http.post(environment.API_URL + "AddUpdateClient", obj);
   }
