@@ -1,9 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { start } from 'repl';
 import { ClientService } from '../../services/client.service';
 import { EmployeeList } from '../../model/class/interface/user';
 import { Client } from '../../model/class/Client';
+import { sign } from 'crypto';
 
 @Component({
   selector: 'app-clientproject',
@@ -32,7 +33,7 @@ export class ClientprojectComponent implements OnInit {
   clientSrv = inject(ClientService);
   employeeList: EmployeeList[] = [];
   clientList: Client[] = [];
-
+  firstName = signal('John')
 
   ngOnInit(): void {
     this.getAllClient();
@@ -44,7 +45,9 @@ export class ClientprojectComponent implements OnInit {
       this.employeeList = res.data;
     });
   }
-
+  changeFname(){
+    this.firstName.set('Welcome');
+  }
   getAllClient() {
     this.clientSrv.getAllClients().subscribe((res: any) => {
       this.clientList = res.data;

@@ -2,17 +2,21 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Client } from '../../model/class/Client';
 import { FormsModule } from '@angular/forms';
 import { ClientService } from '../../services/client.service';
+import { DatePipe, JsonPipe, UpperCasePipe } from '@angular/common';
+import { AlertComponent } from '../../reusableComponents/alert/alert.component';
+import { MyButtonComponent } from '../../reusableComponents/my-button/my-button.component';
 
 @Component({
   selector: 'app-client',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, UpperCasePipe, DatePipe, JsonPipe, AlertComponent,MyButtonComponent],
   templateUrl: './client.component.html',
   styleUrl: './client.component.css'
 })
 export class ClientComponent implements OnInit {
   clientObject: Client = new Client();
   clientList: Client[] = [];
+  currentDate: Date = new Date()
   clientService = inject(ClientService);
   ngOnInit(): void {
     this.loadAllClients();

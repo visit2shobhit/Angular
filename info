@@ -31,3 +31,14 @@ Routes - router-outlet
 Control Flow Statements - @if and @else
 
 Template Form
+Reactive Form
+
+Pipe - Pipe is used to transform data in HTML
+Built-in Pipes
+Custom Pipes
+Signal
+Dynamic Components
+  Sending Data From Parent to Child - We will use input
+  Sending Data Fron Child to Parent - We will use output
+Login Component
+Gaurd  

@@ -1,8 +1,10 @@
+{{clientObject | json}}
+<app-alert [message]="'Indicates List of projects worked in the org.'"></app-alert>
 <div class="row">
     <div class="col-8">
         <div class="card">
             <div class="card-header bg-success">
-                Client List
+                Client List--{{currentDate | date:'dd-MM-yyyy'}}
             </div>
             <div class="card-body">
                 <table class="table">
@@ -20,7 +22,7 @@
                         @for (item of clientList; track $index) {
                         <tr>
                             <td>{{$index+1}}</td>
-                            <td>{{item.companyName}}</td>
+                            <td>{{item.companyName | uppercase}}</td>
                             <td>{{item.contactPersonName}}</td>
                             <td>{{item.contactNo}}</td>
                             <td>{{item.city}}</td>
@@ -103,7 +105,8 @@
                         <button class="btn btn-secondary">Reset</button>
                     </div>
                     <div class="col-6 text-center">
-                        <button class="btn btn-success" (click)="saveClient()">Save Client</button>
+                        <app-my-button [btnClass]="'btn btn-success'" [btnTetxt]="'Save Client'" (onBtnClciked)="saveClient()"></app-my-button>
+                        <!-- <button class="btn btn-success" (click)="saveClient()">Save Client</button> -->
                     </div>
                 </div>
             </div>

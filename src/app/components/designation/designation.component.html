@@ -12,8 +12,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of toDoList">
-      <td>
+    @for(item of designationList$ | async; track $index) {
+      <tr>
+         <td>
         <p class="text-start">{{ item.id }}</p>
       </td>
       <td>
@@ -22,7 +23,8 @@
       <td>
         <p class="text-start">{{ item.completed }}</p>
       </td>
-    </tr>
+      </tr>
+    }  
   </tbody>
 </table>
 
