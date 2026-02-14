@@ -1,0 +1,8 @@
+name: Greet User
+on: [push]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the user
+        run: echo "Hello, ${{ github.actor }}! Welcome to GitHub Actions!"
