@@ -1,4 +1,4 @@
-name: Greet User
+name: Install Dependencies and Test Angular Application
 on: [push]
 jobs:
   install:
@@ -14,8 +14,8 @@ jobs:
       - name: Install dependencies
         run: |
           echo "Installing dependencies..."
-          cd angularrepo && npm install
+          npm install
       - name: Run tests
         run: |
           echo "Running test cases..."
-          cd angularrepo && ng test    
+          ng test    
