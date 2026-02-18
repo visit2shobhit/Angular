@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  userEmail:string = 'admin@test.com'
-  userPassword:string = 'admin@123'
+  userEmail:string = 'adminnew@test.com'
+  userPassword:string = 'admin@123461'
   loginObj: any = {
     email: '',
     password: ''  
