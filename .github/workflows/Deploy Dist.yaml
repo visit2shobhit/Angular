@@ -1,0 +1,16 @@
+name: Greet User
+on: [push]
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        run: |
+          echo "Cloning the repository..."
+          echo "Repository URL:{{toJson(github)}}"
+          git clone https://github.com/{{github.repository}}.git angularrepo
+          cd angularrepo && ls
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies..."
+          cd angularrepo && npm install
