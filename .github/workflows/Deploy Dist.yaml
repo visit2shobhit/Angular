@@ -32,6 +32,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies..."
+          npm install    
       - name: Install Angular CLI globally
         run: |
           echo "Install Angular CLI globally..."
