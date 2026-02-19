@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
       - name: Install Angular CLI globally
         run: |
           echo "Install Angular CLI globally..."
@@ -27,6 +26,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Angular CLI globally
+        run: |
+          echo "Install Angular CLI globally..."
+          npm install -g @angular/cli    
       - name: Build Angular application
         run: |
           echo "Installing dependencies..."
