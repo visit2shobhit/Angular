@@ -26,25 +26,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - name: Install dependencies
-        run: |
-          echo "Installing dependencies..."
-          npm install    
-      - name: Install Angular CLI globally
-        run: |
-          echo "Install Angular CLI globally..."
-          npm install -g @angular/cli    
-      - name: Build Angular application
-        run: |
-          echo "Installing dependencies..."
-          ng build --configuration production
-          echo "Build completed successfully."
+          node-version: 20
+          cache: npm
+
+      - run: npm install
+      - run: npm run build -- --configuration production
   deploy:
     needs: build
     runs-on: ubuntu-latest

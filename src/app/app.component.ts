@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 // import { RouterOutlet } from '@angular/router';
 // import { RolesComponent } from './components/roles/roles.component';
-import { MasterComponent } from './components/master/master.component';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [MasterComponent,RouterOutlet,RouterLink,RouterLinkActive],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

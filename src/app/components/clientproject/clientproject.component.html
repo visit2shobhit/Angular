@@ -39,7 +39,7 @@
                             <div class="text-danger">
                                 <span>
                                     @if(projectForm.controls['projectName'].touched && projectForm.controls['projectName'].errors) {
-                                        @if(projectForm.controls['projectName'].errors?.['required']) {
+                                        @if(projectForm.controls['projectName'].errors['required']) {
                                             <span>Project Name is required.</span>
                                         } 
                                         @if(projectForm.controls['projectName'].errors?.['minlength']) {
