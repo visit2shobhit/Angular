@@ -42,7 +42,7 @@
                                         @if(projectForm.controls['projectName'].errors['required']) {
                                             <span>Project Name is required.</span>
                                         } 
-                                        @if(projectForm.controls['projectName'].errors?.['minlength']) {
+                                        @if(projectForm.controls['projectName'].errors.['minlength']) {
                                             <span>Minimum Length should be 5 characters.</span>
                                         }    
                                     }
